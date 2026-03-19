@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка кондиционеров в Екатеринбурге | КлиматМастер</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    html {
+        overflow-x: clip;
+    }
+
+    body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /* Header */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1a8cff;
+        text-decoration: none;
+        line-height: 1.2;
+    }
+
+    .header-contact {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+    }
+
+    .phone-number {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .btn-call {
+        background: #1a8cff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s;
+    }
+
+    .btn-call:hover {
+        background: #146bbd;
+    }
+
+    .burger-menu {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hero Section — улучшенная версия с паттерном и объёмом */
+    .hero {
+        margin-top: 80px;
+        padding: 60px 30px;
+        background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Абстрактные размытые фигуры для глубины */
+    .hero::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, #1a8cff 0%, transparent 70%);
+        opacity: 0.1;
+        border-radius: 50%;
+        top: -200px;
+        right: -200px;
+        filter: blur(70px);
+        z-index: 0;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, #ff9f1a 0%, transparent 70%);
+        opacity: 0.06;
+        border-radius: 50%;
+        bottom: -250px;
+        left: -100px;
+        filter: blur(80px);
+        z-index: 0;
+    }
+
+    .hero-container {
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        /* Легкий паттерн из точек поверх градиента */
+        background-image: radial-gradient(circle at 40px 40px, rgba(26, 140, 255, 0.03) 3px, transparent 3px);
+        background-size: 80px 80px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 28px;
+        color: #1a8cff;
+    }
+
+    .hero-benefits {
+        list-style: none;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .hero-benefits li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .check-icon {
+        width: 24px;
+        height: 24px;
+        background: #1a8cff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 20px 30px -10px rgba(26, 140, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-image img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 25px 40px -10px rgba(26, 140, 255, 0.5);
+    }
+
+    .btn-cta-large {
+        display: inline-block;
+        background: #1a8cff;
+        color: white;
+        padding: 18px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    .btn-cta-large:hover {
+        background: #146bbd;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(26, 140, 255, 0.4);
+    }
+
+    /* Pains Section */
+    .section {
+        padding: 60px 30px;
+    }
+
+    .bg-white {
+        background: #ffffff;
+    }
+
+    .bg-light {
+        background: #f0f7ff;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 40px;
+    }
+
+    .pains-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .pain-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        border-left: 4px solid #ff6b6b;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .pain-card:hover {
+        box-shadow: 0 8px 32px rgba(26, 140, 255, 0.28);
+        transform: translateY(-3px);
+    }
+
+    .pain-card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .pain-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Pricing Table */
+    .pricing-table-container {
+        max-width: 700px;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    .pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 16px 10px;
+        text-align: left;
+        border-bottom: 1px solid #e0e7ef;
+        font-size: 13px;
+    }
+
+    .pricing-table th:first-child,
+    .pricing-table td:first-child {
+        width: 30%;
+    }
+
+    .pricing-table th:nth-child(2),
+    .pricing-table td:nth-child(2) {
+        text-align: center;
+        width: 40%;
+    }
+
+    .pricing-table td:last-child,
+    .pricing-table th:last-child {
+        white-space: nowrap;
+        text-align: right;
+        width: 30%;
+    }
+
+    .pricing-table th {
+        background: #1a8cff;
+        color: white;
+        font-weight: 600;
+    }
+
+    .pricing-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .pricing-note {
+        text-align: center;
+        color: #666;
+        font-size: 12px;
+        margin-top: 16px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+    }
+
+    /* Advantages Section */
+    .advantages-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .advantage-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        border-top: 4px solid #1a8cff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        text-align: center;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .advantage-card:hover {
+        box-shadow: 0 8px 32px rgba(26, 140, 255, 0.28);
+        transform: translateY(-3px);
+    }
+
+    .advantage-card h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+
+    .advantage-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* Process Section */
+    .process-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .process-step {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .process-step:hover {
+        box-shadow: 0 8px 32px rgba(26, 140, 255, 0.28);
+        transform: translateY(-3px);
+    }
+
+    .step-number {
+        font-size: 48px;
+        font-weight: bold;
+        color: #1a8cff;
+        opacity: 0.5;
+        min-width: 60px;
+    }
+
+    .step-content h3 {
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .step-content p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .reviews-wrapper {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .reviews-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: calc(100% - 24px);
+        background: linear-gradient(to right, transparent, #ffffff);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .reviews-scroll {
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        padding: 16px 8px 24px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .review-card {
+        min-width: 320px;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        scroll-snap-align: start;
+        border-left: 4px solid #1a8cff;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .review-card:hover {
+        box-shadow: 0 8px 32px rgba(26, 140, 255, 0.28);
+        transform: translateY(-3px);
+    }
+
+    .review-text {
+        color: #444;
+        font-style: italic;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .review-author {
+        color: #1a8cff;
+        font-weight: 600;
+    }
+
+    /* FAQ Section */
+    .faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: #ffffff;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        padding: 20px 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: #333;
+        transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+        background: #f9fcff;
+    }
+
+    .faq-toggle {
+        font-size: 24px;
+        color: #1a8cff;
+        transition: transform 0.3s ease;
+        display: inline-block;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-toggle {
+        transform: rotate(45deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        padding: 0 25px;
+        background: #f9fcff;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+        padding: 12px 25px 20px;
+    }
+
+    /* Form Section */
+    .form-section {
+        background: #ffffff;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .form-group label {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 12px 15px;
+        border: 2px solid #e0e7ef;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: inherit;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #1a8cff;
+    }
+
+    .btn-submit {
+        background: #1a8cff;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-submit:hover {
+        background: #146bbd;
+        transform: translateY(-2px);
+    }
+
+    .success-message {
+        display: none;
+        background: #d4edda;
+        color: #155724;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-footer-phone {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .form-footer-phone .phone {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Footer */
+    .footer {
+        background: #1a8cff;
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .footer p {
+        opacity: 0.9;
+    }
+
+    /* Desktop nav */
+    .menu-nav {
+        position: relative;
+    }
+
+    .menu-dropdown {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .menu-dropdown a {
+        color: #555;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s;
+    }
+
+    .menu-dropdown a:hover {
+        color: #1a8cff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 640px) {
+        .header {
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 14px;
+        }
+
+        .header-contact .phone-number {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+        }
+
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            left: auto;
+            width: 160px;
+            background: white;
+            padding: 8px 0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            flex-direction: column;
+            gap: 0;
+            z-index: 1001;
+        }
+
+        .menu-dropdown.active {
+            display: flex;
+        }
+
+        .menu-dropdown a {
+            display: block;
+            padding: 8px 16px;
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            min-height: auto;
+        }
+
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .hero-benefits {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .hero-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-image {
+            order: 1;
+        }
+
+        .pains-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .advantages-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .process-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .review-card {
+            min-width: 85vw;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 24px;
+        }
+
+        .btn-cta-large {
+            font-size: 16px;
+            padding: 15px 30px;
+            display: block;
+            text-align: center;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+
+        #pricing {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+.reviews-dots { display: none; }
+.reviews-scroll::-webkit-scrollbar { height: 4px; }
+.reviews-scroll::-webkit-scrollbar-track { background: #e0e7ef; border-radius: 4px; }
+.reviews-scroll::-webkit-scrollbar-thumb { background: #1a8cff; border-radius: 4px; }
+
+    .reviews-dot.active {
+        background: #1a8cff;
+        transform: scale(1.3);
+    }
+</style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">КлиматМастер<br>Екатеринбург</a>
+        <div class="header-contact">
+            <nav class="menu-nav">
+                <button class="burger-menu" onclick="toggleMenu()">☰</button>
+            </nav>
+            <a href="tel:+73433184567" class="phone-number">+7 (343) 318-45-67</a>
+            <a href="tel:+73433184567" class="btn-call">Позвонить</a>
+            <div class="menu-dropdown">
+                <a href="#pains">Проблемы</a>
+                <a href="#pricing">Цены</a>
+                <a href="#process">Процесс</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Установка кондиционеров в Екатеринбурге под ключ за 1 день</h1>
+            <ul class="hero-benefits">
+                <li><span class="check-icon">✓</span> Выезд в день заявки</li>
+                <li><span class="check-icon">✓</span> Гарантия 3 года на монтаж</li>
+                <li><span class="check-icon">✓</span> Без грязи в квартире</li>
+                <li><span class="check-icon">✓</span> Оплата после запуска</li>
+            </ul>
+            <a href="tel:+73433184567" class="btn-cta-large">📞 Позвонить сейчас</a>
+        </div>
+        <div class="hero-image">
+            <!-- Здесь ожидается, что файл hero-klimat.jpg лежит в той же папке, что и index.html -->
+            <img src="hero-klimat.jpg" alt="Установка кондиционера">
+        </div>
+    </div>
+</section>
+
+<!-- Pains Section -->
+<section id="pains" class="section bg-white">
+    <h2 class="section-title">Узнаёте себя?</h2>
+    <div class="pains-grid">
+        <div class="pain-card">
+            <h3>Мастер приедет через неделю</h3>
+            <p>Ждёте специалиста слишком долго, когда жара уже невыносима.</p>
+        </div>
+        <div class="pain-card">
+            <h3>После установки — грязь и мусор</h3>
+            <p>Рассыпана пыль по всей квартире, стены в царапинах, штробы кривые.</p>
+        </div>
+        <div class="pain-card">
+            <h3>Гарантия только на словах</h3>
+            <p>Договорились с частником, но после проблемы он не отвечает.</p>
+        </div>
+        <div class="pain-card">
+            <h3>Цена «от 10к», а по факту в 2 раза больше</h3>
+            <p>На месте добавляют услуги без предупреждения, цена удваивается.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="section bg-light">
+    <h2 class="section-title">Стоимость монтажа под ключ</h2>
+    <div class="pricing-table-container">
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Площадь помещения</th>
+                    <th>Мощность кондиционера</th>
+                    <th>Цена монтажа</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>до 20 м²</td>
+                    <td>7–9 тыс. BTU</td>
+                    <td>от 15 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>20–30 м²</td>
+                    <td>12 тыс. BTU</td>
+                    <td>от 18 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>30–45 м²</td>
+                    <td>18 тыс. BTU</td>
+                    <td>от 22 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>45–70 м²</td>
+                    <td>24 тыс. BTU</td>
+                    <td>от 28 000 ₽</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pricing-note">Материалы включены, трасса до 5 м. Доп. трасса — 1 000 ₽/м. Выезд за город — 500 ₽/10 км.</p>
+    </div>
+</section>
+
+<!-- Advantages Section -->
+<section class="section bg-white">
+    <h2 class="section-title">Почему выбирают КлиматМастер</h2>
+    <div class="advantages-grid">
+        <div class="advantage-card">
+            <h3>Выезд в день заявки</h3>
+            <p>Часто приезжаем в тот же день обращения</p>
+        </div>
+        <div class="advantage-card">
+            <h3>Работаем аккуратно</h3>
+            <p>Без пыли и мусора в квартире</p>
+        </div>
+        <div class="advantage-card">
+            <h3>Гарантия 3 года</h3>
+            <p>Официальная гарантия на монтаж письменно</p>
+        </div>
+        <div class="advantage-card">
+            <h3>Официальный ИП</h3>
+            <p>Предоставляем чек и договор</p>
+        </div>
+        <div class="advantage-card">
+            <h3>Оригинальные комплектующие</h3>
+            <p>Только сертифицированные материалы</p>
+        </div>
+        <div class="advantage-card">
+            <h3>Цена как договорились</h3>
+            <p>Без сюрпризов и доплат на месте</p>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section id="process" class="section bg-light">
+    <h2 class="section-title">Как проходит установка</h2>
+    <div class="process-grid">
+        <div class="process-step">
+            <span class="step-number">01</span>
+            <div class="step-content">
+                <h3>Звонок или заявка</h3>
+                <p>Обсуждаем задачу, называем точную цену</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <span class="step-number">02</span>
+            <div class="step-content">
+                <h3>Замер и расчёт</h3>
+                <p>Приезжаем, уточняем детали по месту</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <span class="step-number">03</span>
+            <div class="step-content">
+                <h3>Монтаж за 2–4 часа</h3>
+                <p>Аккуратно, без грязи и пыли</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <span class="step-number">04</span>
+            <div class="step-content">
+                <h3>Запуск и инструктаж</h3>
+                <p>Проверяем работу, объясняем как пользоваться</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="section bg-white">
+    <h2 class="section-title">Отзывы клиентов</h2>
+    <div class="reviews-wrapper">
+        <div class="reviews-scroll">
+            <div class="review-card">
+                <p class="review-text">«Приехал в тот же день, всё аккуратно, без пыли. Цена вышла ровно как договорились.»</p>
+                <p class="review-author">— Алексей</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">«Быстро, профессионально, не мешали работе. Гарантия 3 года — это реально успокаивает.»</p>
+                <p class="review-author">— Марина</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">«Выезжали за город, всё сделали за день. Цены адекватные.»</p>
+                <p class="review-author">— Сергей</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">«Два кондиционера в квартиру, работал чисто, всё проверил при нас.»</p>
+                <p class="review-author">— Ольга</p>
+            </div>
+        </div>
+        <div class="reviews-dots" id="reviewsDots"></div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-light">
+    <h2 class="section-title">Частые вопросы</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Сколько стоит монтаж кондиционера?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Цена зависит от площади помещения и сложности монтажа. Смотрите таблицу выше с подробными ценами.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Выезжаете в пригород?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Да, работаем в Верхней Пышме, Среднеуральске, Березовском и области. Дополнительно 500 ₽ за каждые 10 км.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Какая гарантия на монтаж?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Мы предоставляем официальную гарантию 3 года на монтажные работы в договоре.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Нужно ли готовить квартиру?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Нет, мы работаем максимально аккуратно и убираем за собой всё после завершения работ.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Можно ли установить кондиционер зимой?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Да, монтаж возможен в любое время года. Зимой даже выгоднее — нет очередей!
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact" class="section form-section">
+    <h2 class="section-title">Оставить заявку</h2>
+    <div class="form-container">
+        <form class="contact-form" id="leadForm">
+            <div class="form-group">
+                <label for="name">Ваше имя *</label>
+                <input type="text" id="name" name="name" required placeholder="Иван">
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (900) 000-00-00">
+            </div>
+            <div class="form-group">
+                <label for="area">Площадь помещения</label>
+                <select id="area" name="area">
+                    <option value="">Не указано</option>
+                    <option value="до 20">до 20 м²</option>
+                    <option value="20-30">20–30 м²</option>
+                    <option value="30-45">30–45 м²</option>
+                    <option value="45-70">45–70 м²</option>
+                    <option value="более 70">более 70 м²</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" rows="3" placeholder="Адрес, дополнительные вопросы..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Отправить заявку</button>
+            <div class="success-message" id="successMessage">
+                Спасибо! Перезвоним в течение часа.
+            </div>
+        </form>
+        <div class="form-footer-phone">
+            <a href="tel:+73433184567" class="phone">📞 +7 (343) 318-45-67</a>
+            <br><br>
+            <a href="tel:+73433184567" class="btn-call">Позвонить</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 КлиматМастер Екатеринбург. Все права защищены.</p>
+    <p>Работаем ежедневно с 8:00 до 21:00</p>
+</footer>
+
+<script>
+    // Burger Menu Toggle
+    function toggleMenu() {
+        document.querySelector('.menu-dropdown').classList.toggle('active');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(element) {
+        const faqItem = element.parentElement;
+        faqItem.classList.toggle('active');
+    }
+
+    // Form Submission to Telegram
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const btn = this.querySelector('.btn-submit');
+        btn.disabled = true;
+        btn.textContent = 'Отправка...';
+        
+        const data = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            area: document.getElementById('area').value || 'Не указано',
+            comment: document.getElementById('comment').value || 'Нет'
+        };
+        
+        try {
+            // Замените YOUR_BOT_TOKEN на ваш токен
+            const botToken = 'YOUR_BOT_TOKEN'; 
+            const chatId = '@klimatmaster_ekb';
+            
+            const message = `Новая заявка\nИмя: ${data.name}\nТелефон: ${data.phone}\nПлощадь: ${data.area}\nКомментарий: ${data.comment}`;
+            
+            const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
+            
+            if (response.ok) {
+                document.getElementById('leadForm').reset();
+                document.getElementById('successMessage').style.display = 'block';
+                btn.textContent = 'Отправлено!';
+                
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                    btn.disabled = false;
+                    btn.textContent = 'Отправить заявку';
+                }, 5000);
+            } else {
+                alert('Ошибка отправки. Пожалуйста, позвоните нам.');
+                btn.disabled = false;
+                btn.textContent = 'Отправить заявку';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Ошибка соединения. Пожалуйста, позвоните нам.');
+            btn.disabled = false;
+            btn.textContent = 'Отправить заявку';
+        }
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Close mobile menu after clicking link
+                document.querySelector('.menu-dropdown').classList.remove('active');
+            }
+        });
+    });
+
+    // Reviews dots
+    const scroll = document.querySelector('.reviews-scroll');
+    const dotsContainer = document.getElementById('reviewsDots');
+    const cards = scroll.querySelectorAll('.review-card');
+
+    cards.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('reviews-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    scroll.addEventListener('scroll', () => {
+        const cardWidth = cards[0].offsetWidth + 25;
+        const active = Math.round(scroll.scrollLeft / cardWidth);
+        dotsContainer.querySelectorAll('.reviews-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === active);
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header-contact')) {
+            document.querySelector('.menu-dropdown').classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
